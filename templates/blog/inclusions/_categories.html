@@ -1,0 +1,16 @@
+<div class="widget widget-archives">
+  <h3 class="widget-title">分类</h3>
+  <ul>
+    {% for category in category_list %}
+      <li>
+        <a href="{% url 'blog:category' category.pk %}">{{ category.name }} <span class="post-count">(13)</span></a>
+      </li>
+    {% empty %}
+      暂无分类!
+    {% endfor %}
+  </ul>
+</div>
+
+<span class="post-count">(13)</span>显示的是文章的数目
+
+
